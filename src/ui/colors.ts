@@ -7,7 +7,7 @@ interface Colors {
 }
 
 
-export const colors : Colors = {
+export const colorsui : Colors = {
     backGroundColor : "#000509",
     backGroundGray  : "#0C1116",
     primaryColor    : "#E7EDF2",

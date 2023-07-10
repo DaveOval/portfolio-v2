@@ -1,14 +1,30 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components';
+import { colorsui } from '../../ui/colors';
+import { Tooltip } from '@mui/material';
+import { useState } from 'react';
+
+interface FloatLinksProps {
+    visible: boolean;
+}
 
 const NavContainer = styled.div`
     width: 100%;
     height: 10vh;
+    min-height: 60px;
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #5252528f;
+    background-color: ${colorsui.backGroundColor};
+    border-bottom: 1px solid ${colorsui.secondaryColor};
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    @media (min-width: 768px) {
+        height: 8vh;
+    }
 `
 const LeftNav = styled.div`
     width: 50%;
@@ -25,16 +41,20 @@ const Logo = styled.img`
     margin: 0 15px;
 `
 const LinksContainer = styled.div`
-    width: 40%;
+    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 2.5rem;    
     display: none;
+    @media (min-width: 768px) {
+        display: flex;
+    }
 `
 const Links = styled.a`
     text-decoration: none;
-    color: #fff;
+    color: ${colorsui.secondaryColor};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,49 +68,151 @@ const Socials = styled.img`
 const RightNav = styled.div`
     width: 50%;
     height: 100%;
-    background-color: #5252528f;
     display: flex;
     align-items: center;
     justify-content: center;
 `
-const MenuLink = styled.a`
+const MenuLink = styled(Link)`
     text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 0 15px;
-    transition: all .3s ease-in-out;
-    &:hover{
-        color: #f2f2f2;
+    color: ${colorsui.secondaryColor};
+    font-size: 1.0;
+    font-weight: 100;
+    letter-spacing: 2px;
+    transition: all 0.2s ease-in-out;
+    padding: 0.5rem 1.0rem;
+    &:hover {
+        background-color: ${colorsui.secondaryColor};
+        color: ${colorsui.backGroundColor};
+    }
+    &:active {
+        scale: 0.9;
     }
 `
-
+const MenuLinks = styled.div`
+    display: none;
+    flex-wrap: wrap;
+    gap: 1.0rem;
+    @media (min-width: 768px) {
+        display: flex;
+    }
+`
+const CheckBox = styled.input`
+    display: none;
+`
+const CheckBoxLabel = styled.label`
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-image: url('../../../public/menu.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    filter: invert(1);
+    transition: all 0.1s ease-in-out;
+    &:active {
+        scale: 0.9;
+    }
+    @media (min-width: 768px) {
+        display: none;
+    } 
+`
+const FloatLinks = styled.div<FloatLinksProps>`
+    transition: all 0.3s ease-in-out;
+    background-color: ${colorsui.backGroundGray};
+    width: 90%;
+    max-width: 300px;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    top: 11vh;
+    visibility: ${props => (props.visible ? "visible" : "hidden")};
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 2.0rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+`
+const FloatLinksFirstDiv = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    padding-bottom: 1.0rem;
+    border-bottom: 1px solid ${colorsui.secondaryColor};
+`
+const FloatLinksSecondDiv = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.1rem;
+`
 export const Navbar = () =>{
+    const [LinksVisible, setLinksVisible] = useState(false);
     return(
         <NavContainer>
             <LeftNav>
                 <Logo src="../../../public/favicon.svg" alt="logo"/>
                 <LinksContainer>
-                <Links href="https://github.com/DaveOval" target="_blank">
-                    <Socials src="../../../public/socials-icons/github.svg" alt="github link" />
-                </Links>
-                <Links href="https://www.instagram.com/dave_oval/" target="_blank">
-                    <Socials src="../../../public/socials-icons/instagram.svg" alt="instagram link" />
-                </Links>
-                <Links href="https://www.linkedin.com/in/david-vazquez-developer/" target="_blank">
-                    <Socials src="../../../public/socials-icons/linkedin.svg" alt="linkedin link" />
-                </Links>
-                <Links href="https://twitter.com/daveultrau" target="_blank">
-                    <Socials src="../../../public/socials-icons/twitter.svg" alt="twitter link" />
-                </Links>
+                    <Links href="https://github.com/DaveOval" target="_blank">
+                        <Tooltip title="Github" placement="bottom" arrow>
+                            <Socials src="../../../public/socials-icons/github.svg" alt="github link" />
+                        </Tooltip>
+                    </Links>
+                    <Links href="https://www.instagram.com/dave_oval/" target="_blank">
+                        <Tooltip title="Instagram" placement="bottom" arrow>
+                            <Socials src="../../../public/socials-icons/instagram.svg" alt="instagram link" />
+                        </Tooltip>
+                    </Links>
+                    <Links href="https://www.linkedin.com/in/david-vazquez-developer/" target="_blank">
+                        <Tooltip title="Linkedin" placement="bottom" arrow>
+                            <Socials src="../../../public/socials-icons/linkedin.svg" alt="linkedin link" />
+                        </Tooltip>
+                    </Links>
+                    <Links href="https://twitter.com/daveultrau" target="_blank">
+                        <Tooltip title="Twitter" placement="bottom" arrow>
+                            <Socials src="../../../public/socials-icons/twitter.svg" alt="twitter link" />
+                        </Tooltip>
+                    </Links>
                 </LinksContainer>
             </LeftNav>
             <RightNav>
-                <MenuLink >Works</MenuLink>
-                <MenuLink >Experiences</MenuLink>
-                <MenuLink >Skills</MenuLink>
-                <MenuLink >Contact</MenuLink>
+                <CheckBoxLabel htmlFor="showhidde"></CheckBoxLabel>
+                <CheckBox type="checkbox" id='showhidde' checked={LinksVisible} onChange={() => setLinksVisible(!LinksVisible)}/>
+                <MenuLinks>
+                    <MenuLink to="/experience">Experience</MenuLink>
+                    <MenuLink to="/projects">Projects</MenuLink>
+                    <MenuLink to="/contact">Contact</MenuLink>
+                </MenuLinks>
             </RightNav>
+            <FloatLinks visible={LinksVisible}>
+                <FloatLinksFirstDiv>
+                    <Links href="https://github.com/DaveOval" target="_blank">
+                        <Socials src="../../../public/socials-icons/github.svg" alt="github link" />
+                    </Links>
+                    <Links href="https://www.instagram.com/dave_oval/" target="_blank">
+                        <Socials src="../../../public/socials-icons/instagram.svg" alt="instagram link" />
+                    </Links>
+                    <Links href="https://www.linkedin.com/in/david-vazquez-developer/" target="_blank">
+                        <Socials src="../../../public/socials-icons/linkedin.svg" alt="linkedin link" />
+                    </Links>
+                    <Links href="https://twitter.com/daveultrau" target="_blank">
+                        <Socials src="../../../public/socials-icons/twitter.svg" alt="twitter link" />
+                    </Links>
+                </FloatLinksFirstDiv>
+                <FloatLinksSecondDiv>
+                    <MenuLink to="/experience">Experience</MenuLink>
+                    <MenuLink to="/projects">Projects</MenuLink>
+                    <MenuLink to="/contact">Contact</MenuLink>
+                </FloatLinksSecondDiv>
+            </FloatLinks>
         </NavContainer>
     )
 }
