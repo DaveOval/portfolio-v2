@@ -103,7 +103,7 @@ const CheckBoxLabel = styled.label`
     display: block;
     width: 25px;
     height: 25px;
-    background-image: url('/public/menu.svg');
+    background-image: url('./public/menu.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -159,26 +159,26 @@ export const Navbar = () =>{
     return(
         <NavContainer>
             <LeftNav>
-                <Logo src="/public/favicon.svg" alt="logo"/>
+                <Logo src="./public/favicon.svg" alt="logo"/>
                 <LinksContainer>
                     <Links href="https://github.com/DaveOval" target="_blank">
                         <Tooltip title="Github" placement="bottom" arrow>
-                            <Socials src="/public/socials-icons/github.svg" alt="github link" />
+                            <Socials src="./public/socials-icons/github.svg" alt="github link" />
                         </Tooltip>
                     </Links>
                     <Links href="https://www.instagram.com/dave_oval/" target="_blank">
                         <Tooltip title="Instagram" placement="bottom" arrow>
-                            <Socials src="/public/socials-icons/instagram.svg" alt="instagram link" />
+                            <Socials src="./public/socials-icons/instagram.svg" alt="instagram link" />
                         </Tooltip>
                     </Links>
                     <Links href="https://www.linkedin.com/in/david-vazquez-developer/" target="_blank">
                         <Tooltip title="Linkedin" placement="bottom" arrow>
-                            <Socials src="/public/socials-icons/linkedin.svg" alt="linkedin link" />
+                            <Socials src="./public/socials-icons/linkedin.svg" alt="linkedin link" />
                         </Tooltip>
                     </Links>
                     <Links href="https://twitter.com/daveultrau" target="_blank">
                         <Tooltip title="Twitter" placement="bottom" arrow>
-                            <Socials src="/public/socials-icons/twitter.svg" alt="twitter link" />
+                            <Socials src="./public/socials-icons/twitter.svg" alt="twitter link" />
                         </Tooltip>
                     </Links>
                 </LinksContainer>
@@ -195,16 +195,16 @@ export const Navbar = () =>{
             <FloatLinks visible={LinksVisible}>
                 <FloatLinksFirstDiv>
                     <Links href="https://github.com/DaveOval" target="_blank">
-                        <Socials src="../../../public/socials-icons/github.svg" alt="github link" />
+                        <Socials src="./public/socials-icons/github.svg" alt="github link" />
                     </Links>
                     <Links href="https://www.instagram.com/dave_oval/" target="_blank">
-                        <Socials src="../../../public/socials-icons/instagram.svg" alt="instagram link" />
+                        <Socials src="./public/socials-icons/instagram.svg" alt="instagram link" />
                     </Links>
                     <Links href="https://www.linkedin.com/in/david-vazquez-developer/" target="_blank">
-                        <Socials src="../../../public/socials-icons/linkedin.svg" alt="linkedin link" />
+                        <Socials src="./public/socials-icons/linkedin.svg" alt="linkedin link" />
                     </Links>
                     <Links href="https://twitter.com/daveultrau" target="_blank">
-                        <Socials src="../../../public/socials-icons/twitter.svg" alt="twitter link" />
+                        <Socials src="./public/socials-icons/twitter.svg" alt="twitter link" />
                     </Links>
                 </FloatLinksFirstDiv>
                 <FloatLinksSecondDiv>
