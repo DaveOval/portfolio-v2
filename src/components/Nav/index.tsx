@@ -16,9 +16,9 @@ const NavContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: ${colorsui.backGroundColor};
+    background-color: #0c1116e9;
     border-bottom: 1px solid ${colorsui.secondaryColor};
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     position: fixed;
     top: 0;
     z-index: 100;
@@ -80,6 +80,7 @@ const MenuLink = styled(Link)`
     letter-spacing: 2px;
     transition: all 0.2s ease-in-out;
     padding: 0.5rem 1.0rem;
+    border-radius: 10px;
     &:hover {
         background-color: ${colorsui.secondaryColor};
         color: ${colorsui.backGroundColor};
@@ -119,7 +120,7 @@ const CheckBoxLabel = styled.label`
 `
 const FloatLinks = styled.div<FloatLinksProps>`
     transition: all 0.3s ease-in-out;
-    background-color: ${colorsui.backGroundGray};
+    background-color: #0c1116e9;
     width: 90%;
     max-width: 300px;
     position: absolute;
@@ -134,7 +135,7 @@ const FloatLinks = styled.div<FloatLinksProps>`
     justify-content: center;
     padding: 2.0rem;
     border-radius: 10px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
 `
 const FloatLinksFirstDiv = styled.div`
     width: 100%;
