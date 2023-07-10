@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 import { colorsui } from '../../ui/colors';
 import { yearsOfExperience } from '../../utility/years';
-/* import { Tooltip } from '@mui/material'; */
+import { Tooltip } from '@mui/material';
 
 const NavContainer = styled.header`
     width: 100%;
@@ -61,9 +61,15 @@ const Button = styled(Link)`
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: black;
+    color: ${colorsui.backGroundColor};
     font-size: 1.2rem;
     font-weight: bold;
+    transition: 0.3s ease-in-out;
+    &:hover{
+        background: ${colorsui.accent};
+        color: ${colorsui.primaryColor};
+        box-shadow: 0px 0px 10px 0px ${colorsui.accent};
+    }
 `
 const LeftContainerCards = styled.div`
     width: 100%;
@@ -84,18 +90,23 @@ const Card = styled.div`
     gap: 1rem;
     justify-content: center;
     align-items: center;
+    transition: 0.3s ease-in-out;
+    &:hover{
+        background: ${colorsui.secondaryColor};
+    }
 `
 const CardTitle = styled.p`
     width: 80%;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: black;
+    color: ${colorsui.backGroundColor};
     text-align: center;
     word-wrap: break-word;
 `
 const CardDescription = styled.p`
     font-size: 1.0rem;
-    color: black;
+    text-align: center;
+    color: ${colorsui.backGroundGray};
 `
 
 const RigthContainer = styled.div`
@@ -141,13 +152,12 @@ const RigthContainerBody = styled.div`
     align-items: center;
     picture{
         width: 50%;
-        height: 100%;
-        border-radius: 15px;
+        border-radius: 50%;
+        background-color: ${colorsui.backGroundGray};
     }
 `
 const Photo = styled.img`
     width: 100%;
-    height: 100%;
     object-fit: cover;
     border-radius: 15px;
 `
@@ -169,6 +179,7 @@ const NickName = styled.div`
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
     background-color: ${colorsui.backGroundGray};
 `
@@ -187,10 +198,25 @@ const BaseIn = styled.div`
 const ImageContainer = styled.picture`
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 const BaseInImg = styled.img`
-    width: 100%;
-    height: 100%;
+    width: 40px;
+    object-fit: cover;
+    margin: auto;
+    filter: invert(100%);
+`
+const ContrastLetter = styled.p`
+    color: ${colorsui.primaryColor};
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    word-wrap: break-word;
+`
+const Flag = styled.img`
+    width: 30px;
     object-fit: cover;
 `
 export const HeaderHome = () =>{
@@ -198,20 +224,20 @@ export const HeaderHome = () =>{
         <NavContainer>
             <LeftContainer>
                 <LeftContainerHeader>
-                    <p>Realize your ideas through your proficiency in iOS and front-end development.</p>
+                    <p>Realize your ideas through your proficiency in iOS and Front-end development.</p>
                     <Button to="/contact">Contact me ✌️</Button>
                 </LeftContainerHeader>
                 <LeftContainerCards>
                     <Card>
-                        <CardTitle>{ yearsOfExperience }</CardTitle>
-                        <CardDescription>experience</CardDescription>
+                        <CardTitle>{ yearsOfExperience } +</CardTitle>
+                        <CardDescription>Experience</CardDescription>
                     </Card>
                     <Card>
-                        <CardTitle>54+</CardTitle>
+                        <CardTitle>1</CardTitle>
                         <CardDescription>Handle Project</CardDescription>
                     </Card>
                     <Card>
-                        <CardTitle>40+</CardTitle>
+                        <CardTitle>1</CardTitle>
                         <CardDescription>Clients</CardDescription>
                     </Card>
                 </LeftContainerCards>
@@ -227,20 +253,24 @@ export const HeaderHome = () =>{
                     </picture>
                     <RigthContainerBodyDescription>
                         <NickName>
-                            <p>Nick name:</p>
+                            <ContrastLetter>Nick name:</ContrastLetter>
                             <p>Dave_U</p>
                         </NickName>
                         <BaseIn>
-                            <p>Based in: Guadalajara, Mexico</p>
+                            <ContrastLetter>Based in:</ContrastLetter>
+                            <p>Guadalajara, Mexico</p>
                             <ImageContainer>
-                                <BaseInImg src="/gdl.webp" alt="" />
+                                <BaseInImg src="/location.svg" alt="" />
                             </ImageContainer>
                         </BaseIn>
                         <NickName>
-                            <p>Nick name:</p>
-                            <p>Dave_U</p>
+                            <Tooltip title="Native language" placement="top">
+                                <Flag src="/mx.svg" alt="" />
+                            </Tooltip>
+                            <Tooltip title="B2" placement="top">
+                                <Flag src="/usa.svg" alt="" />
+                            </Tooltip>    
                         </NickName>
-
                     </RigthContainerBodyDescription>
                 </RigthContainerBody>
             </RigthContainer>
