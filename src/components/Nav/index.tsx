@@ -160,7 +160,9 @@ export const Navbar = () =>{
     return(
         <NavContainer>
             <LeftNav>
-                <Logo src="./favicon.svg" alt="logo"/>
+                <Link to="/">
+                    <Logo src="./favicon.svg" alt="logo"/>
+                </Link>
                 <LinksContainer>
                     <Links href="https://github.com/DaveOval" target="_blank">
                         <Tooltip title="Github" placement="bottom" arrow>

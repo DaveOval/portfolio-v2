@@ -1,4 +1,4 @@
-import { FrontPortFolio } from "../../components/FrontPortfolio"
+import { FrontPortFolio } from "../../components/Portfolio"
 import { HeaderHome } from "../../components/HeaderHome"
 
 
