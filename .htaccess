@@ -1,4 +1,0 @@
-# Front-controller (exclude static resources)
-RewriteRule ^index\.html$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f 
-RewriteRule . index.html [L]
