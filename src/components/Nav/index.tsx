@@ -104,7 +104,7 @@ const CheckBoxLabel = styled.label`
     display: block;
     width: 25px;
     height: 25px;
-    background-image: url('./public/menu.svg');
+    background-image: url('./menu.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
