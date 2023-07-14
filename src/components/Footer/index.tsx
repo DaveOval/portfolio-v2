@@ -61,7 +61,7 @@ export const Footer = () =>{
                 <p>Code with love with</p>
                 <ReactLogo src="./react.svg" alt="" />
                 <p>&</p>
-                <Languaje src="./public/ts.svg" alt="" />
+                <Languaje src="./ts.svg" alt="" />
             </Contenedor>
                 <p> David Vazquez - { data.getFullYear() } </p>
         </FooterContainer>
