@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { colorsui } from '../../ui/colors';
 import { Link } from 'react-router-dom';
+import { PortfolioCard } from '../PorfolioCard';
+import { projectsFront } from '../../data/projects';
 
 
 const PortFolioContainer = styled.section`
@@ -54,15 +56,7 @@ const Container = styled.div`
 
 export const FrontPortFolio = () => {
 
-    /* const [currentCardIndex, setCurrentCardIndex] = useState(0); */
-    /* const [visibleCards, setVisibleCards] = useState(3); */
-
-    /* const previousCards = () => {
-        setCurrentCardIndex( prevIndex => prevIndex - visibleCards )
-    }
-    const nextCards = () => {
-        setCurrentCardIndex( prevIndex => prevIndex + visibleCards )
-    } */
+    
 
     return (
         <>
@@ -71,49 +65,23 @@ export const FrontPortFolio = () => {
                     <Title>Front-end Portolio</Title>
                     <SubTitle to="/projects">See All</SubTitle>
                     <Container>
-                        {/* <Button onClick={previousCards} disabled={currentCardIndex === 0 }>{"<"}</Button>
-                        <CardsContainer>
-                            <Card>
-                                <img src="https://picsum.photos/200/300" alt="img" />
-                            </Card>
-                            <Card>
-                                <img src="https://picsum.photos/200/300" alt="img" />
-                            </Card>
-                            <Card>
-                                <img src="https://picsum.photos/200/300" alt="img" />
-                            </Card>
-                            <Card>
-                                <img src="https://picsum.photos/200/300" alt="img" />
-                            </Card>
-                            <Card>
-                                <img src="https://picsum.photos/200/300" alt="img" />
-                            </Card>
-                            <Card>
-                                <img src="https://picsum.photos/200/300" alt="img" />
-                            </Card>
-                            <Card>
-                                <img src="https://picsum.photos/200/300" alt="img" />
-                            </Card>
-                            <Card>
-                                <img src="https://picsum.photos/200/300" alt="img" />
-                            </Card>
-                            <Card>
-                                <img src="https://picsum.photos/200/300" alt="img" />
-                            </Card>
-                            <Card>
-                                <img src="https://picsum.photos/200/300" alt="img" />
-                            </Card>
-                            <Card>
-                                <img src="https://picsum.photos/200/300" alt="img" />
-                            </Card>
-                            <Card>
-                                <img src="https://picsum.photos/200/300" alt="img" />
-                            </Card>
-                            <Card>
-                                <img src="https://picsum.photos/200/300" alt="img" />
-                            </Card>
-                        </CardsContainer>
-                        <Button onClick={nextCards} disabled={currentCardIndex >= 60}>{">"}</Button> */}
+                        { projectsFront.map((project) => {
+                            return (
+                                <PortfolioCard 
+                                    key={project.id}
+                                    id={project.id}
+                                    name={project.name}
+                                    img={project.img}
+                                    description={project.description}
+                                    type={project.type}
+                                    tecnologysFront={project.tecnologysFront}
+                                    tecnologysBack={project.tecnologysBack}
+                                    linkGithub={project.linkGithub}
+                                    linkDeploy={project.linkDeploy}
+                                />
+                            )
+                        })
+                        }
                     </Container>
                 </Header>
             </PortFolioContainer>
