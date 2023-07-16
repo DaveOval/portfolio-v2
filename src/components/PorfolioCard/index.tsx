@@ -17,7 +17,7 @@ type PortfolioCardProps =  {
 }
 const Card = styled.div`
     min-width: 300px;
-    height: 450px;
+    height: 500px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -72,7 +72,8 @@ const CardText = styled.div`
     font-size: 1rem;
     color: ${colorsui.primaryColor};
     font-weight: 300;
-
+    margin: 0.5rem 0;
+    
 `
 const LanguajesContainer = styled.div`
     width: 90%;
@@ -115,6 +116,11 @@ const CardLink = styled.a`
     font-size: 1rem;
     text-align: center;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        background-color: ${colorsui.accent};
+        color: white;
+    }
 `
 
 
@@ -138,7 +144,7 @@ export const PortfolioCard = (props : PortfolioCardProps) => {
                     { tecnologysFront.map((languaje) => {
                         return (
                             <Tooltip title={ languaje } arrow placement="top">
-                                <LanguajeImg src={`./public/languajes/${languaje}.svg`}   alt={ languaje } />
+                                <LanguajeImg src={`languajes/${languaje}.svg`}   alt={ languaje } />
                             </Tooltip>
                         )
                     }) }
