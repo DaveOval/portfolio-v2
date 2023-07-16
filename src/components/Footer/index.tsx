@@ -58,7 +58,7 @@ export const Footer = () =>{
         <FooterContainer>
             <Logo src="./favicon.svg" alt="" />
             <Contenedor>
-                <p>Code with love with</p>
+                <p>Code with love using</p>
                 <ReactLogo src="./react.svg" alt="" />
                 <p>&</p>
                 <Languaje src="./ts.svg" alt="" />

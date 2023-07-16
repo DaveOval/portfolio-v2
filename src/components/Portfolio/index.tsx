@@ -3,6 +3,8 @@ import { colorsui } from '../../ui/colors';
 import { Link } from 'react-router-dom';
 import { PortfolioCard } from '../PorfolioCard';
 import { projectsFront } from '../../data/projects';
+import { Tooltip } from '@mui/material';
+import { SeeMoreCard } from '../SeeMoreCard';
 
 
 const PortFolioContainer = styled.section`
@@ -47,25 +49,32 @@ const Container = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
+    overflow-x: scroll;
+    gap: 1rem;
+    padding: 1.5rem 0;
 `
-
-
 
 export const FrontPortFolio = () => {
 
-    
+    let counterFront = 0;
+    /* let counterBack = 0; */
 
     return (
         <>
             <PortFolioContainer>
                 <Header>
                     <Title>Front-end Portolio</Title>
-                    <SubTitle to="/projects">See All</SubTitle>
+                    <SubTitle to="/projects">
+                        <Tooltip title="See All Projects" arrow>
+                            <span>See All</span>
+                        </Tooltip>
+                    </SubTitle>
                     <Container>
                         { projectsFront.map((project) => {
+                            if (counterFront === 5) return;
+                            counterFront++;
                             return (
                                 <PortfolioCard 
                                     key={project.id}
@@ -82,6 +91,7 @@ export const FrontPortFolio = () => {
                             )
                         })
                         }
+                        <SeeMoreCard />
                     </Container>
                 </Header>
             </PortFolioContainer>

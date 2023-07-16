@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { colorsui } from '../../ui/colors';
 import { yearsOfExperience } from '../../utility/years';
 import { Tooltip } from '@mui/material';
+import { numberOfProyects } from '../../data/projects';
 
 const NavContainer = styled.header`
     width: 100%;
@@ -233,7 +234,7 @@ export const HeaderHome = () =>{
                         <CardDescription>Experience</CardDescription>
                     </Card>
                     <Card>
-                        <CardTitle>1</CardTitle>
+                        <CardTitle>{ numberOfProyects }</CardTitle>
                         <CardDescription>Handle Project</CardDescription>
                     </Card>
                     <Card>
