@@ -15,7 +15,7 @@ export const projectsFront: Proyects[] = [
     {
         id: 1,
         name : "Devmura",
-        img : "https://images.pexels.com/photos/17456631/pexels-photo-17456631/free-photo-of-ciudad-calle-edificio-vintage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        img : "devmura",
         description: "Project developed during Generation Mexico's bootcamp, where a social network was created",
         type: "Fullstack",
         tecnologysFront: ["html", "css", "javascript", "react", "vite", "vercel" ],
@@ -26,7 +26,7 @@ export const projectsFront: Proyects[] = [
     {
         id: 2,
         name : "FilMax",
-        img : "https://images.pexels.com/photos/17456631/pexels-photo-17456631/free-photo-of-ciudad-calle-edificio-vintage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        img : "filmax",
         description: "Project independently undertaken, where I developed a streaming platform similar to Netflix",
         type: "Front-end",
         tecnologysFront: ["html", "css", "javascript", "vite", ],
@@ -37,7 +37,7 @@ export const projectsFront: Proyects[] = [
     {
         id: 3,
         name : "Black Jack",
-        img : "https://images.pexels.com/photos/17456631/pexels-photo-17456631/free-photo-of-ciudad-calle-edificio-vintage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        img : "blackjack",
         description: "Exercise in which the game of blackjack was created",
         type: "Front-end",
         tecnologysFront: ["html", "css", "javascript", "vite", ],
@@ -48,7 +48,7 @@ export const projectsFront: Proyects[] = [
     {
         id: 4,
         name : "Pokedex",
-        img : "https://images.pexels.com/photos/17456631/pexels-photo-17456631/free-photo-of-ciudad-calle-edificio-vintage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        img : "pokedex",
         description: "I created a Pokédex-inspired application with additional features and functionalities.",
         type: "Front-end",
         tecnologysFront: ["html", "css", "javascript", ],
@@ -59,7 +59,7 @@ export const projectsFront: Proyects[] = [
     {
         id: 5,
         name : "caesar cipher",
-        img : "https://images.pexels.com/photos/17456631/pexels-photo-17456631/free-photo-of-ciudad-calle-edificio-vintage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        img : "encriptador",
         description: "I created a Pokédex-inspired application with additional features and functionalities.",
         type: "Front-end",
         tecnologysFront: ["html", "css", "javascript", ],
@@ -70,7 +70,7 @@ export const projectsFront: Proyects[] = [
     {
         id: 6,
         name : "To-do list",
-        img : "https://images.pexels.com/photos/17456631/pexels-photo-17456631/free-photo-of-ciudad-calle-edificio-vintage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        img : "todo",
         description: "I created a Pokédex-inspired application with additional features and functionalities.",
         type: "Front-end",
         tecnologysFront: ["html", "css", "javascript", ],
@@ -81,7 +81,7 @@ export const projectsFront: Proyects[] = [
     {
         id: 7,
         name : "Frontend-Mentor-challenges",
-        img : "https://images.pexels.com/photos/17456631/pexels-photo-17456631/free-photo-of-ciudad-calle-edificio-vintage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        img : "frontendmentorchallenges",
         description: "I created a Pokédex-inspired application with additional features and functionalities.",
         type: "Front-end",
         tecnologysFront: ["html", "css", "javascript", ],
@@ -92,7 +92,7 @@ export const projectsFront: Proyects[] = [
     {
         id: 8,
         name : "FreeCodeCamp-portfolio",
-        img : "https://images.pexels.com/photos/17456631/pexels-photo-17456631/free-photo-of-ciudad-calle-edificio-vintage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        img : "freecodecamp",
         description: "I created a Pokédex-inspired application with additional features and functionalities.",
         type: "Front-end",
         tecnologysFront: ["html", "css", "javascript", ],

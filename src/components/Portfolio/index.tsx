@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { colorsui } from '../../ui/colors';
 import { Link } from 'react-router-dom';
 import { PortfolioCard } from '../PorfolioCard';
-import { projectsFront } from '../../data/projects';
+import { projectsFront, /* projectsMobile */ } from '../../data/projects';
 import { Tooltip } from '@mui/material';
 import { SeeMoreCard } from '../SeeMoreCard';
 
@@ -59,7 +59,7 @@ const Container = styled.div`
 export const FrontPortFolio = () => {
 
     let counterFront = 0;
-    /* let counterBack = 0; */
+    /* let counterMobile = 0; */
 
     return (
         <>
@@ -95,12 +95,40 @@ export const FrontPortFolio = () => {
                     </Container>
                 </Header>
             </PortFolioContainer>
-            <PortFolioContainer>
+           {/*  <PortFolioContainer>
                 <Header>
                     <Title>Mobile Portolio</Title>
-                    <SubTitle to="/projects">See All</SubTitle>
+                    <SubTitle to="/projects">
+                        <Tooltip title="See All Projects" arrow>
+                            <span>See All</span>
+                        </Tooltip>
+                    </SubTitle>
+                    <Container>
+                        { projectsMobile.map((project) => {
+                            if (counterMobile === 5) return;
+                            counterMobile++;
+                            return (
+                                <PortfolioCard 
+                                    key={project.id}
+                                    id={project.id}
+                                    name={project.name}
+                                    img={project.img}
+                                    description={project.description}
+                                    type={project.type}
+                                    tecnologysFront={project.tecnologysFront}
+                                    tecnologysBack={project.tecnologysBack}
+                                    linkGithub={project.linkGithub}
+                                    linkDeploy={project.linkDeploy}
+                                />
+                            )
+                        }
+
+                        )
+                        }
+                        <SeeMoreCard /> 
+                    </Container>
                 </Header>
-            </PortFolioContainer>
+            </PortFolioContainer> */}
         </>
     )
 }

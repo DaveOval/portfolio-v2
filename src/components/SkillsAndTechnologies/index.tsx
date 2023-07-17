@@ -3,9 +3,6 @@ import { colorsui } from "../../ui/colors";
 import { skillsAndTechnologies } from "../../data/languages";
 import { Tooltip } from "@mui/material";
 
-
-
-
 const Container = styled.div`
     width: 100%;
     max-width: 1200px;
@@ -25,7 +22,6 @@ const Container = styled.div`
         font-size: 1.5rem;
     }
 `
-
 const Languages = styled.div`
     width: 100%;
     max-width: 1200px;
@@ -59,8 +55,8 @@ export const SkillsAndTechnologies = () => {
             <Languages>
                 {skillsAndTechnologies.map((item) => {
                     return (
-                        <Tooltip title={item} arrow>
-                            <Language src={`languajes/${item}.svg`} />
+                        <Tooltip title={item} arrow >
+                            <Language key={ skillsAndTechnologies.indexOf(item) } src={`languajes/${item}.svg`}  />
                         </Tooltip>
                     )}
                 )}

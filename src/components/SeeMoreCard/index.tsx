@@ -26,9 +26,8 @@ export const SeeMoreCard = () => {
     
 
     return (
-        <Card to="/projets">
+        <Card to="/projects">
             <p>See more projets</p>
-
         </Card>
     )
 }
