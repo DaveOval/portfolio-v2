@@ -1,5 +1,6 @@
 import { FrontPortFolio } from "../../components/Portfolio"
 import { HeaderHome } from "../../components/HeaderHome"
+import { SkillsAndTechnologies } from "../../components/SkillsAndTechnologies"
 
 
 export const Home = () => {
@@ -7,6 +8,7 @@ export const Home = () => {
         <>
             <HeaderHome />
             <FrontPortFolio />
+            <SkillsAndTechnologies />
         </>
     )
 }

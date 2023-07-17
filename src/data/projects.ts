@@ -56,6 +56,50 @@ export const projectsFront: Proyects[] = [
         linkGithub: "https://github.com/DaveOval/Pokedex",
         linkDeploy: "https://daveoval.github.io/Pokedex/"
     }, 
+    {
+        id: 5,
+        name : "caesar cipher",
+        img : "https://images.pexels.com/photos/17456631/pexels-photo-17456631/free-photo-of-ciudad-calle-edificio-vintage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        description: "I created a Pokédex-inspired application with additional features and functionalities.",
+        type: "Front-end",
+        tecnologysFront: ["html", "css", "javascript", ],
+        tecnologysBack: [],
+        linkGithub: "https://github.com/DaveOval/encriptador-texto-JS",
+        linkDeploy: "https://daveoval.github.io/encriptador-texto-JS/"
+    }, 
+    {
+        id: 6,
+        name : "To-do list",
+        img : "https://images.pexels.com/photos/17456631/pexels-photo-17456631/free-photo-of-ciudad-calle-edificio-vintage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        description: "I created a Pokédex-inspired application with additional features and functionalities.",
+        type: "Front-end",
+        tecnologysFront: ["html", "css", "javascript", ],
+        tecnologysBack: [],
+        linkGithub: "https://github.com/DaveOval/todo-react",
+        linkDeploy: "https://daveoval.github.io/todo-react/"
+    }, 
+    {
+        id: 7,
+        name : "Frontend-Mentor-challenges",
+        img : "https://images.pexels.com/photos/17456631/pexels-photo-17456631/free-photo-of-ciudad-calle-edificio-vintage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        description: "I created a Pokédex-inspired application with additional features and functionalities.",
+        type: "Front-end",
+        tecnologysFront: ["html", "css", "javascript", ],
+        tecnologysBack: [],
+        linkGithub: "https://github.com/DaveOval/Frontend-Mentor-challenges",
+        linkDeploy: "https://daveoval.github.io/Frontend-Mentor-challenges/"
+    }, 
+    {
+        id: 8,
+        name : "FreeCodeCamp-portfolio",
+        img : "https://images.pexels.com/photos/17456631/pexels-photo-17456631/free-photo-of-ciudad-calle-edificio-vintage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        description: "I created a Pokédex-inspired application with additional features and functionalities.",
+        type: "Front-end",
+        tecnologysFront: ["html", "css", "javascript", ],
+        tecnologysBack: [],
+        linkGithub: "https://github.com/DaveOval/FreeCodeCamp-portfolio",
+        linkDeploy: "https://daveoval.github.io/FreeCodeCamp-portfolio/"
+    }, 
 ]
 
 export const projectsMobile : any = [
