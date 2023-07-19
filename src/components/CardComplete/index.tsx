@@ -82,6 +82,23 @@ const Button = styled(Link)`
         color: ${colorsui.primaryColor};
     }
 `
+const SVGContainer = styled.div`
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+`
+const SVG = styled.img`
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+    background-color: white;
+    border-radius: 5px;
+`
 
 
 export const CardComplete = (props: CardCompleteProps) => {
@@ -96,8 +113,19 @@ export const CardComplete = (props: CardCompleteProps) => {
                 <p>{type}</p>
             </CardHeader>
             <Description>{description}</Description>
-                {tecnologysFront}
-                {tecnologysBack}
+                <SVGContainer>
+                    {tecnologysFront.map((item) => {
+                        return (
+                            <SVG key={tecnologysFront.indexOf(item)} src={`languajes/${item}.svg`} />
+                        )
+                    })}
+                    {tecnologysBack.map((item) => {
+                        return (
+                            <SVG key={tecnologysBack.indexOf(item)} src={`languajes/${item}.svg`} />
+                        )
+                    })
+                    }
+                </SVGContainer>
             <ButtonsContainer>
                 <Button to={linkGithub} target="_blank">Github</Button>
                 <Button to={linkDeploy} target="_blank">Deploy</Button>

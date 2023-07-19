@@ -37,9 +37,10 @@ const Language = styled.img`
     width: 50px;
     height: 50px;
     border-radius: 10px;
-    border: 1px solid ${colorsui.primaryColor};
+    border: 1px solid ${colorsui.secondaryColor};
     padding: 0.5rem;
     transition: all 0.3s ease-in-out;
+    background-color: ${colorsui.primaryColor};
     &:hover{
         transform: scale(1.2);
         background-color: ${colorsui.primaryColor};
