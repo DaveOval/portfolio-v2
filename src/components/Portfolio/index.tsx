@@ -95,7 +95,7 @@ export const FrontPortFolio = () => {
                     </Container>
                 </Header>
             </PortFolioContainer>
-           {/*  <PortFolioContainer>
+            {/* <PortFolioContainer>
                 <Header>
                     <Title>Mobile Portolio</Title>
                     <SubTitle to="/projects">

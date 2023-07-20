@@ -1,6 +1,8 @@
 import { FrontPortFolio } from "../../components/Portfolio"
 import { HeaderHome } from "../../components/HeaderHome"
 import { SkillsAndTechnologies } from "../../components/SkillsAndTechnologies"
+import { ExperienceCard } from "../../components/ExperienceCard"
+
 
 
 export const Home = () => {
@@ -9,6 +11,7 @@ export const Home = () => {
             <HeaderHome />
             <FrontPortFolio />
             <SkillsAndTechnologies />
+            <ExperienceCard />
         </>
     )
 }
