@@ -15,7 +15,7 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin: 1rem auto;
+    margin: 3rem auto;
     color: ${colorsui.primaryColor};
     border-radius: 15px;
     p{
@@ -23,7 +23,7 @@ const Container = styled.div`
     }
 `
 const Languages = styled.div`
-    width: 100%;
+    width: 95%;
     max-width: 1200px;
     display: flex;
     flex-direction: row;

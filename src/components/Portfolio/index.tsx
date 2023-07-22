@@ -17,7 +17,7 @@ const PortFolioContainer = styled.section`
     justify-content: center;
     align-items: center;
     background-color: ${colorsui.backGroundGray};
-    margin-top: 2rem;
+    margin-top: 4rem;
     border-radius: 15px;
 `
 const Header = styled.div`

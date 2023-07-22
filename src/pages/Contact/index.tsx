@@ -6,7 +6,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 1200px;
+    max-width: 900px;
     margin-top: 11vh;
     margin: 0 auto;
     height: 90vh;
@@ -93,8 +93,11 @@ export const Contact = () => {
                 </Header>
                 <Body>
                     <div>
-                        <p>Drop me a line or say ✌️on social networks</p>
-                        <p>Whether you're a aojwdnlakjwndl akndwlawnk</p>
+                        <p>Drop me a line or say ✌️on social networks Whether you're a aojwdnlakjwndl akndwlawnk</p>
+                        <p>Whether you're a developinhg team in need of support or an early-stage company looking to level up your design, I'd love to talk about your project</p>
+                    </div>
+                    <div>
+
                     </div>
 
                 </Body>

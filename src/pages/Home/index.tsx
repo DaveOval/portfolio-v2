@@ -9,9 +9,9 @@ export const Home = () => {
     return (
         <>
             <HeaderHome />
-            <FrontPortFolio />
             <SkillsAndTechnologies />
             <ExperienceCard />
+            <FrontPortFolio />
         </>
     )
 }
