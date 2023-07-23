@@ -225,7 +225,7 @@ export const HeaderHome = () =>{
         <NavContainer>
             <LeftContainer>
                 <LeftContainerHeader>
-                    <p>Realize your ideas through your proficiency in iOS and Front-end development.</p>
+                    <p>Crafting Exceptional Digital Experiences, Line by Line, Pixel by Pixel: Your Tailor-made Front-End and iOS Developer.</p>
                     <Button to="/contact">Contact me ✌️</Button>
                 </LeftContainerHeader>
                 <LeftContainerCards>
