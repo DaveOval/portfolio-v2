@@ -2,7 +2,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import styled from 'styled-components';
 import {  toast } from 'sonner';
 import { colorsui } from '../../ui/colors';
-import { Button, TextField } from '@mui/material';
+import {  Button, TextField } from '@mui/material';
 import { useState } from 'react';
 
 const Form = styled.form`
@@ -101,16 +101,12 @@ export const FormContact = () => {
     const [emailError, setEmailError] = useState("");
     const [messageError, setMessageError] = useState("");
 
-    if (state.succeeded){
-        toast.success("Message sent successfully");
-    }else if (state.errors){
-        toast.error("Message not sent");
-    }
 
     const handleName = (e: any ) => {
         const value = e.target.value;
+        console.log(value);
         /* setName(value); */
-        if(value.trim() === "" ){
+        if( value == "" ){
             setNameError("Name is required")
         }else if(value.length < 3){
             setNameError("Name must be at least 3 characters long")
@@ -124,7 +120,7 @@ export const FormContact = () => {
     const handleEmail = (e: any) => {
         const value = e.target.value;
         /* setEmail(value); */
-        if(value.trim() === "" ){
+        if(value == "" ){
             setEmailError("Email is required")
         }else if(value.length < 3){
             setEmailError("Email must be at least 3 characters long")
@@ -140,7 +136,7 @@ export const FormContact = () => {
     const handleMessage = (e: any) => {
         const value = e.target.value;
         /* setMessage(value); */
-        if(value.trim() === "" ){
+        if( value == "" ){
             setMessageError("Message is required")
         }else if(value.length < 3){
             setMessageError("Message must be at least 3 characters long")
@@ -151,9 +147,25 @@ export const FormContact = () => {
             /* setMessage(value) */
         }
     }
+    const onSubmit = (e: any) => {
+        e.preventDefault();
+        /* handleName(e);
+        handleEmail(e);
+        handleMessage(e); */
+
+        if(!nameError && !emailError && !messageError){
+            handleSubmit(e);
+        }
+        if(state.succeeded){
+            
+            toast.success('Message sent successfully');
+        }else if (state.errors){
+            toast.error("Error sending message");
+        }
+    }
 
     return(
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={onSubmit}>
             <Title>Contact me</Title>
             <Inputs>
                 <CustomInput 
@@ -165,6 +177,11 @@ export const FormContact = () => {
                     onChange={handleName}
                     error={Boolean(nameError)}
                 />
+                <ValidationError
+                    prefix="Name"
+                    field="name"
+                    errors={state.errors}
+                />
                 <CustomInput
                     id="email"
                     label="Email"
@@ -174,6 +191,11 @@ export const FormContact = () => {
                     onChange={handleEmail}
                     error={Boolean(emailError)}
                 />
+                <ValidationError
+                    prefix="Email"
+                    field="email"
+                    errors={state.errors}
+                /> 
                 <CustomInput
                     id="message"
                     label="Message"
@@ -185,28 +207,18 @@ export const FormContact = () => {
                     multiline
                     rows={4}
                 />
-                <Button 
-                    variant='contained' 
-                    type="submit" 
-                    disabled={state.submitting}
-                >
-                    Send
-                </Button>  
-                <ValidationError
-                    prefix="Email"
-                    field="email"
-                    errors={state.errors}
-                />   
                 <ValidationError
                     prefix="Message"
                     field="message"
                     errors={state.errors}
                 />
-                <ValidationError
-                    prefix="Name"
-                    field="name"
-                    errors={state.errors}
-                />
+                <Button 
+                    variant='contained' 
+                    type="submit" 
+                    
+                >
+                    Send
+                </Button>  
             </Inputs>
 
         </Form>
