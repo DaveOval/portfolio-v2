@@ -1,6 +1,6 @@
 import { useForm, ValidationError } from '@formspree/react';
 import styled from 'styled-components';
-import {  toast } from 'sonner';
+import {  toast, Toaster } from 'sonner';
 import { colorsui } from '../../ui/colors';
 import {  Button, TextField } from '@mui/material';
 import { useState } from 'react';
@@ -92,9 +92,9 @@ export const FormContact = () => {
 
     // state
     const [state, handleSubmit] = useForm("mwkdpyzj");
-    /* const [name, setName] = useState("");
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [message, setMessage] = useState(""); */
+    const [message, setMessage] = useState("");
 
     // Error state for inputs
     const [nameError, setNameError] = useState("");
@@ -104,8 +104,8 @@ export const FormContact = () => {
 
     const handleName = (e: any ) => {
         const value = e.target.value;
+        setName(value);
         console.log(value);
-        /* setName(value); */
         if( value == "" ){
             setNameError("Name is required")
         }else if(value.length < 3){
@@ -119,7 +119,7 @@ export const FormContact = () => {
     }
     const handleEmail = (e: any) => {
         const value = e.target.value;
-        /* setEmail(value); */
+        setEmail(value);
         if(value == "" ){
             setEmailError("Email is required")
         }else if(value.length < 3){
@@ -130,12 +130,12 @@ export const FormContact = () => {
             setEmailError("Email must be valid")
         }else{
             setEmailError("")
-            /* setEmail(value) */
+            setEmail(value)
         }
     }
     const handleMessage = (e: any) => {
         const value = e.target.value;
-        /* setMessage(value); */
+        setMessage(value);
         if( value == "" ){
             setMessageError("Message is required")
         }else if(value.length < 3){
@@ -144,23 +144,32 @@ export const FormContact = () => {
             setMessageError("Message must be less than 100 characters long")
         }else{
             setMessageError("")
-            /* setMessage(value) */
+            setMessage(value)
         }
     }
     const onSubmit = (e: any) => {
         e.preventDefault();
-        /* handleName(e);
-        handleEmail(e);
-        handleMessage(e); */
 
-        if(!nameError && !emailError && !messageError){
-            handleSubmit(e);
-        }
-        if(state.succeeded){
-            
+        if(name != "" && email != "" && message != "" ){
+            setName("");
+            setEmail("");
+            setMessage("");
             toast.success('Message sent successfully');
+            handleSubmit(e);
+            console.log(state);
+            console.log(state.succeeded);
+            console.log("enviado");
         }else if (state.errors){
-            toast.error("Error sending message");
+            if(name == "" || name == undefined) {
+                setNameError("Name is required")
+                toast.error('Name is required');
+            }else if(email == "" || email == undefined){
+                setEmailError("Email is required")
+                toast.error('Email is required');
+            }else if(message == "" || message == undefined){
+                setMessageError("Message is required")
+                toast.error('Message is required');
+            }
         }
     }
 
@@ -176,6 +185,7 @@ export const FormContact = () => {
                     helperText={nameError}
                     onChange={handleName}
                     error={Boolean(nameError)}
+                    value={name}
                 />
                 <ValidationError
                     prefix="Name"
@@ -190,6 +200,7 @@ export const FormContact = () => {
                     helperText={emailError}
                     onChange={handleEmail}
                     error={Boolean(emailError)}
+                    value={email}
                 />
                 <ValidationError
                     prefix="Email"
@@ -206,6 +217,7 @@ export const FormContact = () => {
                     error={Boolean(messageError)}
                     multiline
                     rows={4}
+                    value={message}
                 />
                 <ValidationError
                     prefix="Message"
@@ -215,12 +227,12 @@ export const FormContact = () => {
                 <Button 
                     variant='contained' 
                     type="submit" 
-                    
                 >
                     Send
                 </Button>  
             </Inputs>
+            <Toaster position='bottom-center' richColors />
+        </Form> 
 
-        </Form>
     )
 }
