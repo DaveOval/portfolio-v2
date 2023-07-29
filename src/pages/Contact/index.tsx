@@ -1,15 +1,16 @@
 import styled from "styled-components"
 import { colorsui } from "../../ui/colors"
+import { FormContact } from "../../components/Form"
 
 const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 900px;
+    max-width: 1400px;
     margin-top: 11vh;
     margin: 0 auto;
-    height: 90vh;
+    height: auto;
 `
 
 const Card = styled.div`
@@ -23,6 +24,7 @@ const Card = styled.div`
     border-radius: 15px;
     color: ${colorsui.backGroundColor};
     transition: all 0.5s ease-in-out;
+    margin-top: 20px;
     &:hover {
         box-shadow: 0px 1px 36px 0px rgba(15,58,173,0.61);;
     }
@@ -84,6 +86,10 @@ const Left = styled.div`
     justify-content: flex-start;
     width: 50%;
     margin-bottom: 20px;
+    gap: 1.5rem;
+    @media (max-width: 768px) {
+        width: 90%;
+    }
 `
 const Title = styled.p`
     font-size: 1.5rem;
@@ -91,6 +97,13 @@ const Title = styled.p`
     margin-bottom: 10px;
     margin-top: 10px;
     min-width: 200px;
+    width: 90%;
+`
+const SubTitle = styled.p`
+    font-size: 1.2rem;
+    font-weight: 500;
+    min-width: 200px;
+    width: 90%;
 `
 const Right = styled.div`
     display: flex;
@@ -101,6 +114,9 @@ const Right = styled.div`
     margin-bottom: 20px;
     min-width: 200px;
     gap: 1rem;
+    @media (max-width: 768px) {
+        width: 90%;
+    }
 `
 const DowloadButton = styled.a`
     width: 90%;
@@ -168,9 +184,7 @@ export const Contact = () => {
                 <Body>
                     <Left>
                         <Title>Drop me a line or say ✌️on social networks Whether you're a aojwdnlakjwndl akndwlawnk</Title>
-                        <p>Whether you're a developinhg team in need of support or an early-stage company looking to level up your project, I'd love to talk about your project</p>
-                    </Left>
-                    <Right>
+                        <SubTitle>Whether you're a developinhg team in need of support or an early-stage company looking to level up your project, I'd love to talk about your project</SubTitle>
                         <DowloadButton 
                             href="https://www.canva.com/design/DAFj99ocOVs/NXbqdvvuFzx0Rl9GJJTt9g/edit?utm_content=DAFj99ocOVs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" 
                             target="_blank">
@@ -181,6 +195,9 @@ export const Contact = () => {
                             <DowloadImg src="./email.svg" alt="email" />
                             Send me an email
                         </SendEmail>
+                    </Left>
+                    <Right>
+                        <FormContact />
                     </Right>
                 </Body>
             </Card>
