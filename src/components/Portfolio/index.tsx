@@ -29,7 +29,7 @@ const Header = styled.div`
     align-items: center;
     flex-wrap: wrap;
 `
-const Title = styled.h3`
+const Title = styled.p`
     padding: 1rem 0;
     font-size: 1.5rem;
     color: ${colorsui.primaryColor};
