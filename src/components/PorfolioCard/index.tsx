@@ -132,7 +132,7 @@ export const PortfolioCard = (props : PortfolioCardProps) => {
     return (
         <Card key={ key }>
             <ImgContainer>
-                <CardImg src={`projectsIMG/${img}.webp`} alt={ name } />
+                <CardImg src={`projectsIMG/${img}.webp`} alt={ name } loading="lazy" />
             </ImgContainer>
             <CardBody>
                 <CardHeader>
@@ -144,7 +144,7 @@ export const PortfolioCard = (props : PortfolioCardProps) => {
                     { tecnologysFront.map((languaje) => {
                         return (
                             <Tooltip title={ languaje } arrow placement="top">
-                                <LanguajeImg src={`languajes/${languaje}.svg`}   alt={ languaje } />
+                                <LanguajeImg src={`languajes/${languaje}.svg`}   alt={ languaje } loading="lazy" />
                             </Tooltip>
                         )
                     }) }
@@ -162,7 +162,6 @@ export const PortfolioCard = (props : PortfolioCardProps) => {
                 <ButtonsContainer>
                     <CardLink href={ linkGithub } target="_blank">Github</CardLink>
                     <CardLink href={ linkDeploy } target="_blank">Deploy</CardLink> 
-                    
                 </ButtonsContainer>
 
             </CardBody>

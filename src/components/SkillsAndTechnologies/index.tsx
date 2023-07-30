@@ -56,8 +56,8 @@ export const SkillsAndTechnologies = () => {
             <Languages>
                 {skillsAndTechnologies.map((item) => {
                     return (
-                        <Tooltip title={item} arrow >
-                            <Language key={ skillsAndTechnologies.indexOf(item) } src={`languajes/${item}.svg`}  />
+                        <Tooltip title={item.toUpperCase()} arrow >
+                            <Language key={ skillsAndTechnologies.indexOf(item) } src={`languajes/${item}.svg`} loading="lazy" />
                         </Tooltip>
                     )}
                 )}

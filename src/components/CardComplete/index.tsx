@@ -106,7 +106,7 @@ export const CardComplete = (props: CardCompleteProps) => {
     return (
         <Card key={id}>
             <CardImg>
-                <Img src={`projectsIMG/${img}.webp`} alt="" />
+                <Img src={`projectsIMG/${img}.webp`} alt={name} loading="lazy"/>
             </CardImg>
             <CardHeader>
                 <p>{name}</p>
@@ -116,12 +116,12 @@ export const CardComplete = (props: CardCompleteProps) => {
                 <SVGContainer>
                     {tecnologysFront.map((item) => {
                         return (
-                            <SVG key={tecnologysFront.indexOf(item)} src={`languajes/${item}.svg`} />
+                            <SVG key={tecnologysFront.indexOf(item)} src={`languajes/${item}.svg`} loading="lazy"/>
                         )
                     })}
                     {tecnologysBack.map((item) => {
                         return (
-                            <SVG key={tecnologysBack.indexOf(item)} src={`languajes/${item}.svg`} />
+                            <SVG key={tecnologysBack.indexOf(item)} src={`languajes/${item}.svg`} loading="lazy"/>
                         )
                     })
                     }

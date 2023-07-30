@@ -47,8 +47,9 @@ interface BodyProps {
     visible: boolean;
 }
 const Body = styled.div<BodyProps>`
+    transition: all 0.5s ease-in-out;
     width: 80%;
-    height: ${props => ( props.visible ? "fit-content" : "0")};
+    height: ${props => ( props.visible ? "auto" : "0")};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,7 +58,6 @@ const Body = styled.div<BodyProps>`
     overflow: hidden;
     font-size: 1.5rem;
     padding: 0;
-    transition: all 0.5s ease-in-out;
 `
 const TextBody = styled.p`
     /* padding: 1rem 0; */
