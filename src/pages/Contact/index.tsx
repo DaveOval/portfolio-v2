@@ -146,29 +146,7 @@ const DowloadImg = styled.img`
     height: 30px;
     filter: invert(1); 
 `
-const SendEmail = styled.a`
-    width: 90%;
-    padding: 1rem 0rem;
-    border-radius: 15px;
-    border: 1px solid ${colorsui.backGroundColor};
-    background-color: ${colorsui.backGroundColor};
-    color: ${colorsui.primaryColor};
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    text-decoration: none;
-    &:hover {
-        background-color: ${colorsui.secondaryColor};
-        color: ${colorsui.backGroundColor};
-    }
-    &:hover > img {
-        filter: invert(0);
-    }
-`    
+
 
 export const Contact = () => {
     return (
@@ -191,10 +169,6 @@ export const Contact = () => {
                                 <DowloadImg src="./dowload.svg" alt="dowload" />
                                 See my CV
                         </DowloadButton>
-                        <SendEmail href="mailto:dave_u@outlook.com">
-                            <DowloadImg src="./email.svg" alt="email" />
-                            Send me an email
-                        </SendEmail>
                     </Left>
                     <Right>
                         <FormContact />
