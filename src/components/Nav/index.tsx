@@ -190,7 +190,7 @@ export const Navbar = () =>{
                 <CheckBoxLabel htmlFor="showhidde"></CheckBoxLabel>
                 <CheckBox type="checkbox" id='showhidde' checked={LinksVisible} onChange={() => setLinksVisible(!LinksVisible)}/>
                 <MenuLinks>
-                    <MenuLink to="/experience">Experience</MenuLink>
+                    <MenuLink to="/experience">Exp and certificates</MenuLink>
                     <MenuLink to="/projects">Projects</MenuLink>
                     <MenuLink to="/contact">Contact</MenuLink>
                 </MenuLinks>
@@ -211,7 +211,7 @@ export const Navbar = () =>{
                     </Links>
                 </FloatLinksFirstDiv>
                 <FloatLinksSecondDiv>
-                    <MenuLink to="/experience">Experience</MenuLink>
+                    <MenuLink to="/experience">Exp and certificates</MenuLink>
                     <MenuLink to="/projects">Projects</MenuLink>
                     <MenuLink to="/contact">Contact</MenuLink>
                 </FloatLinksSecondDiv>
