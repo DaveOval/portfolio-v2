@@ -3,13 +3,20 @@ interface Exp {
     title: string,
     img: string,
     description: string,
-}
+    rol: string,
+    startdate: string,
+    finishdate?: string,
+    location: string,
+};
 
-export const compAndCerts: Exp[] = [
+export const comp: Exp[] = [
     {
         id: 1,
         title: "Inotek",
-        img: "https",
-        description: "Empresa dedicada a no se que"
-    }
-]
+        img: "./experience/inotek.png",
+        description: "Empresa tecnologica que ofrece soluciones integrales tecnologicas.",
+        rol: "Front-end Developer Jr",
+        startdate: "27 jun 2023",
+        location: "Zapopan, Jalisco, Mexico"
+    },
+];

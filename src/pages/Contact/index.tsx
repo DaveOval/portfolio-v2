@@ -153,16 +153,16 @@ export const Contact = () => {
         <Container>
             <Card>
                 <Header>
-                    <Img src="./favicon.svg" alt="" />
+                    <Img src="./favicon.svg" alt="david vazquez logo" />
                     <Text>
                         <Botton></Botton>
-                        Available for work
+                        Available for collaboration
                     </Text>
                 </Header>
                 <Body>
                     <Left>
-                        <Title>Drop me a line or say ✌️on social networks Whether you're a aojwdnlakjwndl akndwlawnk</Title>
-                        <SubTitle>Whether you're a developinhg team in need of support or an early-stage company looking to level up your project, I'd love to talk about your project</SubTitle>
+                        <Title>Feel free to drop me a line or give a ✌️signal on social networks.</Title>
+                        <SubTitle>Whether you're a developing team in need of support or an early-stage company looking to elevate your project, I'd love to discuss your project with you.</SubTitle>
                         <DowloadButton 
                             href="https://www.canva.com/design/DAFj99ocOVs/NXbqdvvuFzx0Rl9GJJTt9g/edit?utm_content=DAFj99ocOVs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" 
                             target="_blank">

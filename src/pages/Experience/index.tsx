@@ -1,22 +1,24 @@
 import { Company } from "../../components/Company"
-import { compAndCerts } from "../../data/experience"
+import { comp } from "../../data/experience"
 
 
 
 export const Experience = () => {
     return (
         <div>
-            { compAndCerts.map((item, index) => {
+            { comp.map((comp) => {
                 return (
                     <Company
-                        key={id},
-                        title={title},
-                        img={img},
-                        description={description},
+                        key={comp.id}
+                        title={comp.title}
+                        img={comp.img}
+                        description={comp.description}
+                        rol={comp.rol}
+                        startdate={comp.startdate}
+                        location={comp.location}
                     />
                 )
-            })}
-
+            }) }
         </div>
     )
 }
