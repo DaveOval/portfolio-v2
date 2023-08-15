@@ -4,6 +4,7 @@ import { colorsui } from '../../ui/colors';
 import { yearsOfExperience } from '../../utility/years';
 import { Tooltip } from '@mui/material';
 import { numberOfProyects } from '../../data/projects';
+import { compinies } from '../../data/experience';
 
 const NavContainer = styled.header`
     width: 100%;
@@ -238,7 +239,7 @@ export const HeaderHome = () =>{
                         <CardDescription>Handle Project</CardDescription>
                     </Card>
                     <Card>
-                        <CardTitle>1</CardTitle>
+                        <CardTitle>{compinies}</CardTitle>
                         <CardDescription>Clients</CardDescription>
                     </Card>
                 </LeftContainerCards>
@@ -250,7 +251,7 @@ export const HeaderHome = () =>{
                 </RigthContainerHeader>
                 <RigthContainerBody>
                     <picture>
-                        <Photo src="/favicon.svg" alt="" />
+                        <Photo src="/favicon.svg" alt="dave u david vazquez" />
                     </picture>
                     <RigthContainerBodyDescription>
                         <NickName>
@@ -261,15 +262,15 @@ export const HeaderHome = () =>{
                             <ContrastLetter>Based in:</ContrastLetter>
                             <p>Guadalajara, Mexico</p>
                             <ImageContainer>
-                                <BaseInImg src="/location.svg" alt="" />
+                                <BaseInImg src="/location.svg" alt="location" />
                             </ImageContainer>
                         </BaseIn>
                         <NickName>
                             <Tooltip title="Native language" placement="top">
-                                <Flag src="/mx.svg" alt="" />
+                                <Flag src="/mx.svg" alt="mexico" />
                             </Tooltip>
                             <Tooltip title="B2" placement="top">
-                                <Flag src="/usa.svg" alt="" />
+                                <Flag src="/usa.svg" alt="usa" />
                             </Tooltip>    
                         </NickName>
                     </RigthContainerBodyDescription>

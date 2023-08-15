@@ -20,3 +20,6 @@ export const comp: Exp[] = [
         location: "Zapopan, Jalisco, Mexico"
     },
 ];
+
+
+export const compinies = comp.length

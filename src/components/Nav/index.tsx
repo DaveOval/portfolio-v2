@@ -180,8 +180,8 @@ export const Navbar = () =>{
                         </Tooltip>
                     </Links>
                     <Links href="https://twitter.com/daveultrau" target="_blank">
-                        <Tooltip title="Twitter" placement="bottom" arrow>
-                            <Socials src="./socials-icons/twitter.svg" alt="twitter link" />
+                        <Tooltip title="X (Twitter)" placement="bottom" arrow>
+                            <Socials src="./socials-icons/twitter.svg" alt="X (Twitter) link" />
                         </Tooltip>
                     </Links>
                 </LinksContainer>

@@ -46,7 +46,7 @@ export const Home = () => {
             <HeaderHome />
             <SkillsAndTechnologies />
             <FrontPortFolio />
-            <ExperienceCard />4
+            <ExperienceCard />
             <Services/>
             <LinkToContactContainer>
                 <LinkToContact to="/contact">Contact me</LinkToContact>
