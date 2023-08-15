@@ -19,22 +19,63 @@ const Title = styled.h2`
     margin: 4rem 0;
     width: 100%;
     text-align: center;
+    margin-top: 6rem;
 `
 const CompanyContainer = styled.div`
     width: 100%;
     max-width: 900px;
     height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 1.4rem;
+    gap: 1.0rem;
     color: ${colorsui.primaryColor};
     margin: 0 auto;
     margin-bottom: 2rem;
-    border: 1px solid red;
     border-radius: 15px; 
+    background-color: ${colorsui.backGroundGray};
+    max-height: 300px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        max-height: 100%;
+    }
 `
-
+const CompanyImg = styled.img`
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+    object-fit: cover;
+    @media (max-width: 768px) {
+        max-width: 100%;
+        max-height: 300px;
+        border-radius: 15px 15px 0 0;
+    }
+`
+const CompanyInfo = styled.div`
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0 15px 15px 0;
+    background-color: ${colorsui.backGroundGray};
+    @media (max-width: 768px) {
+        max-width: 90%;
+        max-height: 300px;
+        border-radius: 0 0 15px 15px;
+        padding-bottom: 1rem;
+    }
+`
+const CompanyTitle = styled.p`
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: ${colorsui.primaryColor};
+    margin: 0;
+`
 
 export const Company = ( props : CompanyProps) => {
 
@@ -43,13 +84,15 @@ export const Company = ( props : CompanyProps) => {
     <>
         < Title > Companies I have worked for </Title>
         <CompanyContainer key={key}>
-          <p>{title}</p>
-          <img src={img} alt={title} />
-          <p>{description}</p>
-          <p>{rol}</p>
-          <p>{startdate}</p>
-          <p>{finishdate}</p>
-          <p>{location}</p>
+          <CompanyImg src={img} alt={title} />
+          <CompanyInfo>
+            <CompanyTitle>{title}</CompanyTitle>
+            <p>{rol}</p>
+            <p>{startdate}</p>
+            <p>{finishdate}</p>
+            <p>{description}</p>
+            <p>{location}</p>
+          </CompanyInfo>
         </CompanyContainer>
     </>
   )

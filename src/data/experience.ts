@@ -14,7 +14,7 @@ export const comp: Exp[] = [
         id: 1,
         title: "Inotek",
         img: "./experience/inotek.png",
-        description: "Empresa tecnologica que ofrece soluciones integrales tecnologicas.",
+        description: "Technology company that provides comprehensive technological solutions.",
         rol: "Front-end Developer Jr",
         startdate: "27 jun 2023",
         location: "Zapopan, Jalisco, Mexico"
