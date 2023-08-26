@@ -20,7 +20,7 @@ export const skillsAndTechnologies: String[] = [
     //"kotlin",
     "swift",
     //"node-js",
-    //"mysql",
+    "mysql",
     //"postgresql",
     //"mongodb",
     "java",

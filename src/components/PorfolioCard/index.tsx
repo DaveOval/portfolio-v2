@@ -59,7 +59,7 @@ const CardHeader = styled.div`
     align-items: center;
     margin-bottom: 0.5rem;
 `
-const CardTitle = styled.h3`
+const CardTitle = styled.p`
     font-size: 1.5rem;
     color: ${colorsui.primaryColor};
 `
@@ -73,7 +73,8 @@ const CardText = styled.div`
     color: ${colorsui.primaryColor};
     font-weight: 300;
     margin: 0.5rem 0;
-    
+    text-align: center;
+    text-wrap: balance;
 `
 const LanguajesContainer = styled.div`
     width: 90%;

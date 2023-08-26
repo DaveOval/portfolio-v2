@@ -221,12 +221,16 @@ const Flag = styled.img`
     width: 30px;
     object-fit: cover;
 `
+const Description = styled.p`
+    text-align: center;
+    text-wrap: balance;
+`
 export const HeaderHome = () =>{
     return (
         <NavContainer>
             <LeftContainer>
                 <LeftContainerHeader>
-                    <p>Crafting Exceptional Digital Experiences, Line by Line, Pixel by Pixel: Your Tailor-made Front-End and iOS Developer.</p>
+                    <Description>Crafting Exceptional Digital Experiences, Line by Line, Pixel by Pixel: Your Tailor-made Front-End and iOS Developer.</Description>
                     <Button to="/contact">Contact me ✌️</Button>
                 </LeftContainerHeader>
                 <LeftContainerCards>
