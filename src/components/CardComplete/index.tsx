@@ -56,6 +56,7 @@ const Description = styled.p`
     font-size: 1.3rem;
     font-weight: 300;
     margin-bottom: 1rem;
+    text-wrap: balance;
 `
 
 const ButtonsContainer = styled.div`

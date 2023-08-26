@@ -98,12 +98,17 @@ const Title = styled.p`
     margin-top: 10px;
     min-width: 200px;
     width: 90%;
+    text-align: center;
+    text-wrap: balance;
 `
 const SubTitle = styled.p`
     font-size: 1.2rem;
     font-weight: 500;
     min-width: 200px;
     width: 90%;
+    text-align: center;
+    text-wrap: balance;
+    padding-bottom: 30px;
 `
 const Right = styled.div`
     display: flex;
