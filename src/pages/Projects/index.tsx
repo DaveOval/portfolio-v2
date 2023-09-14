@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { colorsui } from "../../ui/colors"
 import { projectsFront } from "../../data/projects"
 import { CardComplete } from "../../components/CardComplete"
+import { useEffect } from "react"
 
 
 const Main = styled.main`
@@ -37,6 +38,10 @@ const ProjectsContainer = styled.div`
 `
 
 export const Projects = () => {
+    useEffect(() => {
+        document.title = "Projects | David Vazquez"
+    }, [])
+    
     return (
         <Main>
             <Title>Projects</Title>

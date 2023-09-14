@@ -21,7 +21,7 @@ const Main = styled.main`
 
 
 function App() {
-  
+
   return (
     <Router>
       <Navbar/>

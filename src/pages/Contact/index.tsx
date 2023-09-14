@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { colorsui } from "../../ui/colors"
 import { FormContact } from "../../components/Form"
+import { useEffect } from "react"
 
 const Container = styled.div`
     display: flex;
@@ -154,6 +155,11 @@ const DowloadImg = styled.img`
 
 
 export const Contact = () => {
+
+    useEffect(() => {
+        document.title = "Contact | David Vazquez"
+    }, [])
+    
     return (
         <Container>
             <Card>

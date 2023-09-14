@@ -6,6 +6,7 @@ import { Services } from "../../components/Services"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 import { colorsui } from "../../ui/colors"
+import { useEffect } from "react"
 
 const LinkToContactContainer = styled.div`
     display: flex;
@@ -41,6 +42,11 @@ const LinkToContact = styled(Link)`
 `
 
 export const Home = () => {
+
+    useEffect(() => {
+        document.title = "David Vazquez"
+    }, [])
+
     return (
         <>
             <HeaderHome />
