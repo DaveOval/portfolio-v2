@@ -103,7 +103,8 @@ const CardTitle = styled.p`
     font-weight: bold;
     color: ${colorsui.backGroundColor};
     text-align: center;
-    word-wrap: break-word;
+    //word-wrap: break-word;
+    text-wrap: balance;
 `
 const CardDescription = styled.p`
     font-size: 1.0rem;
@@ -251,7 +252,7 @@ export const HeaderHome = () =>{
             <RigthContainer>
                 <RigthContainerHeader>
                     <RigthContainerHeaderTitle>David Vazquez</RigthContainerHeaderTitle>
-                    <RigthContainerHeaderDescription>IOS Developer && Front-end Developer</RigthContainerHeaderDescription>
+                    <RigthContainerHeaderDescription>Front End | DevOps | IOS Developer</RigthContainerHeaderDescription>
                 </RigthContainerHeader>
                 <RigthContainerBody>
                     <picture>

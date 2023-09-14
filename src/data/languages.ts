@@ -32,6 +32,6 @@ export const skillsAndTechnologies: String[] = [
     "vscode",
     //"spring",
     //"spring-boot",
-    //"docker",
+    "docker",
     //"digitalocean",
 ] 
