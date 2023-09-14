@@ -34,4 +34,10 @@ export const skillsAndTechnologies: String[] = [
     //"spring-boot",
     "docker",
     //"digitalocean",
+    //"jenkins",
+    //"kubernetes",
+    //"linux",
+    //"slack",
+    //"oracle-cloud-infrastructure",
+    //"aws",
 ] 
