@@ -252,7 +252,7 @@ export const HeaderHome = () =>{
             <RigthContainer>
                 <RigthContainerHeader>
                     <RigthContainerHeaderTitle>David Vazquez</RigthContainerHeaderTitle>
-                    <RigthContainerHeaderDescription>Front End | DevOps | IOS Developer</RigthContainerHeaderDescription>
+                    <RigthContainerHeaderDescription>Fullstack | DevOps | IOS Developer</RigthContainerHeaderDescription>
                 </RigthContainerHeader>
                 <RigthContainerBody>
                     <picture>
