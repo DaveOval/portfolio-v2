@@ -113,7 +113,18 @@ export const projectsMobile : Proyects[] = [
         tecnologysBack: [],
         linkGithub: "https://github.com/DaveOval/dicee-ios",
         linkDeploy: "" 
-    }
+    },
+    {
+        id: 2,
+        name: "Magic 8 Ball",
+        img: "8-ball",
+        description: "A Magic 8 ball game",
+        type: "IOS app",
+        tecnologysFront: ["swift"],
+        tecnologysBack: [],
+        linkGithub: "https://github.com/DaveOval/magic-8-ball",
+        linkDeploy: "" 
+    },
 ]
     
 
