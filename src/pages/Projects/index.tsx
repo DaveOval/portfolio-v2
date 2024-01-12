@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { colorsui } from "../../ui/colors"
-import { projectsFront } from "../../data/projects"
+import { projectsFront, projectsMobile } from "../../data/projects"
 import { CardComplete } from "../../components/CardComplete"
 import { useEffect } from "react"
 
@@ -64,6 +64,27 @@ export const Projects = () => {
                      })
                     }
                 </ProjectsContainer>
+            
+            <Title>Projects Mobile</Title>
+                <ProjectsContainer>
+                    { projectsMobile.map((project) => {
+                        return (
+                            <CardComplete 
+                                id={project.id}
+                                img={project.img}
+                                name={project.name}
+                                description={project.description}
+                                type={project.type}
+                                tecnologysFront={project.tecnologysFront}
+                                tecnologysBack={project.tecnologysBack}
+                                linkGithub={project.linkGithub}
+                                linkDeploy={project.linkDeploy}
+                            />
+                        )
+                     })
+                    }
+                </ProjectsContainer>
+
         </Main>
     )
 }

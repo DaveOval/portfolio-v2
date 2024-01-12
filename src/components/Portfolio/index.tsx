@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { colorsui } from '../../ui/colors';
 import { Link } from 'react-router-dom';
 import { PortfolioCard } from '../PorfolioCard';
-import { projectsFront, /* projectsMobile */ } from '../../data/projects';
+import { projectsFront,  projectsMobile  } from '../../data/projects';
 import { Tooltip } from '@mui/material';
 import { SeeMoreCard } from '../SeeMoreCard';
 
@@ -59,7 +59,7 @@ const Container = styled.div`
 export const FrontPortFolio = () => {
 
     let counterFront = 0;
-    /* let counterMobile = 0; */
+    let counterMobile = 0;
 
     return (
         <>
@@ -95,7 +95,7 @@ export const FrontPortFolio = () => {
                     </Container>
                 </Header>
             </PortFolioContainer>
-            {/* <PortFolioContainer>
+            <PortFolioContainer>
                 <Header>
                     <Title>Mobile Portolio</Title>
                     <SubTitle to="/projects">
@@ -128,7 +128,7 @@ export const FrontPortFolio = () => {
                         <SeeMoreCard /> 
                     </Container>
                 </Header>
-            </PortFolioContainer> */}
+            </PortFolioContainer>
         </>
     )
 }

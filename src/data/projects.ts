@@ -102,8 +102,18 @@ export const projectsFront: Proyects[] = [
     }, 
 ]
 
-export const projectsMobile : any = [
-    
+export const projectsMobile : Proyects[] = [
+    {
+        id: 1,
+        name: "Dicee",
+        img: "dicee",
+        description: "A ramdom app generator dicee",
+        type: "IOS app",
+        tecnologysFront: ["swift"],
+        tecnologysBack: [],
+        linkGithub: "https://github.com/DaveOval/dicee-ios",
+        linkDeploy: "" 
+    }
 ]
     
 
