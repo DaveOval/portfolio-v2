@@ -125,6 +125,17 @@ export const projectsMobile : Proyects[] = [
         linkGithub: "https://github.com/DaveOval/magic-8-ball",
         linkDeploy: "" 
     },
+    {
+        id: 3,
+        name: "Xylophone",
+        img: "xylophone",
+        description: "A Xylophone usin AVAudioPlayer",
+        type: "IOS app",
+        tecnologysFront: ["swift"],
+        tecnologysBack: [],
+        linkGithub: "https://github.com/DaveOval/Xylophone/tree/main",
+        linkDeploy: "" 
+    },
 ]
     
 
