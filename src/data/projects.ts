@@ -136,6 +136,18 @@ export const projectsMobile : Proyects[] = [
         linkGithub: "https://github.com/DaveOval/Xylophone/tree/main",
         linkDeploy: "" 
     },
+    {
+        id: 4,
+        name: "Quizzler",
+        img: "Quizzler",
+        description: "A Quizzler",
+        type: "IOS app",
+        tecnologysFront: ["swift"],
+        tecnologysBack: [],
+        linkGithub: "https://github.com/DaveOval/Quizzler-iOS",
+        linkDeploy: "" 
+    },
+
 ]
     
 
